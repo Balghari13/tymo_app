@@ -19,7 +19,7 @@ class CustomInput extends StatelessWidget {
     return TextField(
       decoration: InputDecoration(
         filled: true,
-        fillColor: Colors.grey,
+        fillColor: Colors.grey.shade300,
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(15),
           borderSide: BorderSide.none,

@@ -21,7 +21,7 @@ class CustomHeadings extends StatelessWidget {
                 style:
                 TextStyle(fontWeight: FontWeight.bold, fontSize: fontSize)),
             Container(
-              width: 50,
+              width: 40,
               height: 50,
               child: Image.asset(logo, filterQuality: FilterQuality.high,),
             ),
@@ -30,7 +30,7 @@ class CustomHeadings extends StatelessWidget {
         ),
     Align(
     alignment: Alignment.centerLeft,
-    child: Text('To connect with \n your partner',
+    child: Text(subText,
     style:
     TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
     ),

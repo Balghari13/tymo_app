@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:rounded_loading_button/rounded_loading_button.dart';
+import 'package:tymo_app/Screens/Auth/forget_password.dart';
+import 'package:tymo_app/Screens/Auth/registration.dart';
 import 'package:tymo_app/Screens/widgets/custom_heading.dart';
 import 'package:tymo_app/Screens/widgets/custom_input.dart';
 
@@ -82,10 +84,29 @@ SizedBox(height: 15,),
                 borderRadius: 10,
                 color: Colors.green,
                 controller: _btnController, onPressed: (){
-
             },
                 child: Text('Log In')),
             SizedBox(height: 15,),
+            Align(
+              alignment: Alignment.centerLeft,
+                child: InkWell(
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>ForgetPassword()));
+                  },
+                  child: Text('Forget Password?', style: TextStyle(color: Colors.redAccent),
+                  ),
+                ),),
+            
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text("Don't have an account?"),
+                TextButton(onPressed: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>RegistrationScreen()));
+                }, child: Text('Sign Up'))
+              ],
+            )
+
 
 
           ],
