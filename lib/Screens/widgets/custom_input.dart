@@ -3,39 +3,38 @@ import 'package:flutter/material.dart';
 
 class CustomInput extends StatelessWidget {
 
-  final TextInputType keyboardType;
-  final String labelText;
-  final bool obsecureText;
-  final IconData icon;
-  final double size;
+ final TextInputType keyboardType;
+ final String labelText;
+ final bool obscureText;
+ final IconData icon;
 
 
   const CustomInput({super.key, required this.keyboardType,
-    required this.labelText, required this.obsecureText,
-    required this.icon, required this.size});
+    required this.labelText, required this.obscureText,
+    required this.icon, });
 
   @override
   Widget build(BuildContext context) {
     return TextField(
-      decoration: InputDecoration(
-        filled: true,
-        fillColor: Colors.grey.shade300,
-        border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(15),
-          borderSide: BorderSide.none,
-        ),
-
-        prefixIcon: Icon(icon, size:size,),
-        prefixIconColor: Colors.green,
-        labelText: labelText,
-        labelStyle: TextStyle(color: Colors.black, fontSize: size),
-        floatingLabelBehavior: FloatingLabelBehavior.never,
-      ),
-      keyboardType: TextInputType.emailAddress,
-      obscureText: obsecureText,
-      autofocus: false,
+keyboardType: keyboardType,
       textAlign: TextAlign.start,
+      textInputAction: TextInputAction.none,
       textAlignVertical: TextAlignVertical.center,
+      obscureText: obscureText,
+      decoration: InputDecoration(
+        floatingLabelBehavior: FloatingLabelBehavior.never,
+        fillColor: Colors.grey.shade300,
+        filled: true,
+        labelText: labelText,
+        prefixIcon: Icon(icon),
+        border: OutlineInputBorder(
+          borderSide: BorderSide.none,
+          borderRadius: BorderRadius.circular(10),
+
+        )
+      ),
+
+
     );
   }
 }
